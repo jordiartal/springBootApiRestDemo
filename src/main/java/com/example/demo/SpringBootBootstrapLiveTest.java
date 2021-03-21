@@ -6,6 +6,8 @@ import org.springframework.http.MediaType;
 
 import javax.xml.ws.Response;
 
+import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -19,6 +21,10 @@ public class SpringBootBootstrapLiveTest {
         book.setTitle(randomAlphabetic(10));
         book.setAuthor(randomAlphabetic(15));
         return book;
+    }
+
+    private String randomAlphabetic(int i) {
+        return "a";
     }
 
     private String createBookAsUri(Book book) {
